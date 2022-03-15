@@ -2,7 +2,6 @@
 Official Implementation of "HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction", which will be published in CVPR 2022.
 
 ```
-@article{zhou2022hivt,
 @inproceedings{zhou2022hivt,
   title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion prediction},
   author={Zhou, Zikang and Ye, Luyao and Wang, Jianping and Wu, Kui and Lu Kejie},
