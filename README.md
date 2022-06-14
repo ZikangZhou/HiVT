@@ -1,7 +1,7 @@
 # HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction
 This repository is the official implementation of [HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhou_HiVT_Hierarchical_Vector_Transformer_for_Multi-Agent_Motion_Prediction_CVPR_2022_paper.pdf) published in CVPR 2022.
 
-![](https://github.com/ZikangZhou/HiVT/assets/overview.png)
+![](assets/overview.png)
 
 ```
 @inproceedings{zhou2022hivt,
@@ -91,7 +91,7 @@ For this repository, the expected performance on Argoverse 1 validation set is:
 
 ### Qualitative Results
 
-![](https://github.com/ZikangZhou/HiVT/assets/visualization.png)
+![](assets/visualization.png)
 
 ## License
 
