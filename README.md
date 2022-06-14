@@ -73,7 +73,7 @@ python eval.py --root /path/to/dataset_root/ --batch_size 32 --ckpt_path /path/t
 
 ## Pretrained Models
 
-We provide the pretrained HiVT-64 and HiVT-128 in [checkpoints/](https://github.com/ZikangZhou/HiVT/checkpoints). You can evaluate the pretrained models using the aforementioned evaluation command, or have a look at the training process via TensorBoard:
+We provide the pretrained HiVT-64 and HiVT-128 in [checkpoints/](checkpoints). You can evaluate the pretrained models using the aforementioned evaluation command, or have a look at the training process via TensorBoard:
 ```
 tensorboard --log_dir checkpoints/
 ```
@@ -95,5 +95,5 @@ For this repository, the expected performance on Argoverse 1 validation set is:
 
 ## License
 
-This repository is licensed under [Apache 2.0](https://github.com/ZikangZhou/HiVT/LICENSE).
+This repository is licensed under [Apache 2.0](LICENSE).
 
