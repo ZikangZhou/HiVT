@@ -3,9 +3,6 @@ This repository is the official implementation of [HiVT: Hierarchical Vector Tra
 
 ![](https://github.com/ZikangZhou/HiVT/assets/overview.png)
 
-Update:
-2022/5/3: The official code is ready. Currently we are applying for a patent, so I'm not allowed to upload the preprint or the code. The code will be publicly available before July.
-
 ```
 @inproceedings{zhou2022hivt,
   title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion prediction},
