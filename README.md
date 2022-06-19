@@ -26,6 +26,7 @@ conda create -n HiVT python=3.8
 conda activate HiVT
 conda install pytorch==1.8.1 cudatoolkit=11.3 -c pytorch -c conda-forge
 conda install pytorch-geometric==1.7.2 -c rusty1s -c conda-forge
+conda install pytorch-lightning=1.5.2 -c conda-forge
 ```
 
 3\. Download [Argoverse Motion Forecasting Dataset v1.1](https://www.argoverse.org/av1.html). After downloading and extracting the tar.gz files, the dataset directory should be organized as follows:
