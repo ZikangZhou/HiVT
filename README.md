@@ -5,9 +5,10 @@ This repository is the official implementation of [HiVT: Hierarchical Vector Tra
 
 ```
 @inproceedings{zhou2022hivt,
-  title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion prediction},
-  author={Zhou, Zikang and Ye, Luyao and Wang, Jianping and Wu, Kui and Lu Kejie},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction},
+  author={Zhou, Zikang and Ye, Luyao and Wang, Jianping and Wu, Kui and Lu, Kejie},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8823--8833},
   year={2022}
 }
 ```
