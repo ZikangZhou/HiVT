@@ -1,16 +1,7 @@
 # HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction
-This repository is the official implementation of [HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhou_HiVT_Hierarchical_Vector_Transformer_for_Multi-Agent_Motion_Prediction_CVPR_2022_paper.pdf) published in CVPR 2022.
+This repository contains the official implementation of [HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhou_HiVT_Hierarchical_Vector_Transformer_for_Multi-Agent_Motion_Prediction_CVPR_2022_paper.pdf) published in CVPR 2022.
 
 ![](assets/overview.png)
-
-```
-@inproceedings{zhou2022hivt,
-  title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction},
-  author={Zhou, Zikang and Ye, Luyao and Wang, Jianping and Wu, Kui and Lu, Kejie},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2022}
-}
-```
 
 ## Gettting Started
 
@@ -48,26 +39,26 @@ conda install pytorch-lightning==1.5.2 -c conda-forge
 
 ## Training
 
-To train HiVT-64, run:
+To train HiVT-64:
 ```
 python train.py --root /path/to/dataset_root/ --embed_dim 64
 ```
 
-To train HiVT-128, run:
+To train HiVT-128:
 ```
 python train.py --root /path/to/dataset_root/ --embed_dim 128
 ```
 
-**Note**: When running the training command for the first time, it will take several hours to preprocess the data (~3.5 hours on my machine). Training on an RTX 2080 Ti GPU takes 35-40 minutes per epoch.
+**Note**: When running the training script for the first time, it will take several hours to preprocess the data (~3.5 hours on my machine). Training on an RTX 2080 Ti GPU takes 35-40 minutes per epoch.
 
-During training, the checkpoints will be saved in `lightning_logs/` automatically. To monitor the training process, run:
+During training, the checkpoints will be saved in `lightning_logs/` automatically. To monitor the training process:
 ```
 tensorboard --log_dir lightning_logs/
 ```
 
 ## Evaluation
 
-To evaluate the prediction performance, run:
+To evaluate the prediction performance:
 ```
 python eval.py --root /path/to/dataset_root/ --batch_size 32 --ckpt_path /path/to/your_checkpoint.ckpt
 ```
@@ -83,7 +74,7 @@ tensorboard --log_dir checkpoints/
 
 ### Quantitative Results
 
-For this repository, the expected performance on Argoverse 1 validation set is:
+For this repository, the expected performance on Argoverse 1.1 validation set is:
 
 | Models | minADE | minFDE | MR |
 | :--- | :---: | :---: | :---: |
@@ -93,6 +84,17 @@ For this repository, the expected performance on Argoverse 1 validation set is:
 ### Qualitative Results
 
 ![](assets/visualization.png)
+
+## If you found this repository useful, please consider citing our work:
+
+```
+@inproceedings{zhou2022hivt,
+  title={HiVT: Hierarchical Vector Transformer for Multi-Agent Motion Prediction},
+  author={Zhou, Zikang and Ye, Luyao and Wang, Jianping and Wu, Kui and Lu, Kejie},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2022}
+}
+```
 
 ## License
 
