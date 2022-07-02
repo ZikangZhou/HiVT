@@ -85,7 +85,9 @@ For this repository, the expected performance on Argoverse 1.1 validation set is
 
 ![](assets/visualization.png)
 
-## If you found this repository useful, please consider citing our work:
+## Citation
+
+If you found this repository useful, please consider citing our work:
 
 ```
 @inproceedings{zhou2022hivt,
