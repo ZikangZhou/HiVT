@@ -53,7 +53,7 @@ python train.py --root /path/to/dataset_root/ --embed_dim 128
 
 During training, the checkpoints will be saved in `lightning_logs/` automatically. To monitor the training process:
 ```
-tensorboard --log_dir lightning_logs/
+tensorboard --logdir lightning_logs/
 ```
 
 ## Evaluation
@@ -67,7 +67,7 @@ python eval.py --root /path/to/dataset_root/ --batch_size 32 --ckpt_path /path/t
 
 We provide the pretrained HiVT-64 and HiVT-128 in [checkpoints/](checkpoints). You can evaluate the pretrained models using the aforementioned evaluation command, or have a look at the training process via TensorBoard:
 ```
-tensorboard --log_dir checkpoints/
+tensorboard --logdir checkpoints/
 ```
 
 ## Results
