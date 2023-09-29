@@ -14,7 +14,7 @@
 from argparse import ArgumentParser
 
 import pytorch_lightning as pl
-from torch_geometric.data import DataLoader
+from torch_geometric.loader import DataLoader
 
 from datasets import ArgoverseV1Dataset
 from models.hivt import HiVT
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     parser.add_argument('--ckpt_path', type=str, required=True)
     args = parser.parse_args()
 
-    trainer = pl.Trainer.from_argparse_args(args)
+    trainer = pl.Trainer()
     model = HiVT.load_from_checkpoint(checkpoint_path=args.ckpt_path, parallel=True)
     val_dataset = ArgoverseV1Dataset(root=args.root, split='val', local_radius=model.hparams.local_radius)
     dataloader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers,

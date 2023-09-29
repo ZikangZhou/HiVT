@@ -154,7 +154,7 @@ class AAEncoder(MessagePassing):
                                  rotate_mat.expand(self.historical_steps, *rotate_mat.shape)).squeeze(-2))
             center_embed = torch.where(bos_mask.t().unsqueeze(-1),
                                        self.bos_token.unsqueeze(-2),
-                                       center_embed).view(x.shape[0], -1)
+                                       center_embed).reshape(x.shape[0], -1)
         else:
             if rotate_mat is None:
                 center_embed = self.center_embed(x)
@@ -273,7 +273,8 @@ class TemporalEncoderLayer(nn.Module):
     def forward(self,
                 src: torch.Tensor,
                 src_mask: Optional[torch.Tensor] = None,
-                src_key_padding_mask: Optional[torch.Tensor] = None) -> torch.Tensor:
+                src_key_padding_mask: Optional[torch.Tensor] = None,
+                is_causal: bool = None) -> torch.Tensor:
         x = src
         x = x + self._sa_block(self.norm1(x), src_mask, src_key_padding_mask)
         x = x + self._ff_block(self.norm2(x))
