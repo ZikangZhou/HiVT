@@ -62,8 +62,8 @@ class MultipleInputEmbedding(nn.Module):
     def forward(self,
                 continuous_inputs: List[torch.Tensor],
                 categorical_inputs: Optional[List[torch.Tensor]] = None) -> torch.Tensor:
-        for i in range(len(self.module_list)):
-            continuous_inputs[i] = self.module_list[i](continuous_inputs[i])
+        for i, v in enumerate(self.module_list):
+            continuous_inputs[i] = v(continuous_inputs[i])
         output = torch.stack(continuous_inputs).sum(dim=0)
         if categorical_inputs is not None:
             output += torch.stack(categorical_inputs).sum(dim=0)
